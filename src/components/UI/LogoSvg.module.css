@@ -1,0 +1,49 @@
+.rotate {
+  transform: rotate(45deg);
+}
+
+.stroke {
+  stroke-width: 10px;
+  fill-opacity: 0%;
+  stroke-dasharray: 90000;
+  stroke-linecap: square;
+  animation: strokeanim 1.5s cubic-bezier(0.25, 1, 0.5, 1),
+    fillanim 0.7s cubic-bezier(0.5, 0, 0.75, 0) 1s forwards;
+}
+
+.strokealt {
+  stroke-width: 10px;
+  fill-opacity: 0%;
+  stroke-dasharray: 90000;
+  stroke-linecap: square;
+  animation: strokealtanim 1.5s cubic-bezier(0.25, 1, 0.5, 1),
+    fillanim 0.7s cubic-bezier(0.5, 0, 0.75, 0) 1s forwards;
+}
+
+
+@keyframes strokeanim {
+  from {
+    stroke-dashoffset: -1080;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokealtanim {
+  from {
+    stroke-dashoffset: -3080;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillanim {
+  from {
+    fill-opacity: 0%;
+  }
+  to {
+    fill-opacity: 100%;
+  }
+}
