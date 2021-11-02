@@ -1,0 +1,12 @@
+.show{
+  animation: opacity 0.4s cubic-bezier(0.5, 1, 0.89, 1) 0s forwards;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

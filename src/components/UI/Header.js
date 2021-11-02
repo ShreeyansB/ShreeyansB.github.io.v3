@@ -1,4 +1,5 @@
 import { Stack, Box, Flex, useColorMode } from "@chakra-ui/react";
+import classes from "./Header.module.css";
 import React, { useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import MenuToggle from "../Buttons/MenuToggle";
@@ -14,6 +15,7 @@ const Header = (props) => {
     setIsOpen(!isOpen);
   };
 
+  console.log(isOpen);
   return (
     <header>
       <Flex
@@ -24,7 +26,7 @@ const Header = (props) => {
         w="100%"
         mb={8}
         py={7}
-        px={{ base: "20px", md: "17vw" }}
+        px={{ base: "20px", md: "16vw" }}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
       >
@@ -34,6 +36,7 @@ const Header = (props) => {
         <Box
           display={{ base: isOpen ? "block" : "none", md: "block" }}
           flexBasis={{ base: "100%", md: "auto" }}
+          className={isOpen ? classes.show : undefined}
         >
           <Stack
             spacing={5}
