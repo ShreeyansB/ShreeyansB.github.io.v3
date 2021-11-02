@@ -19,17 +19,16 @@ const Header = (props) => {
       <Flex
         as="nav"
         align="center"
-        justify={{ base: "space-between", md: "space-around" }}
+        justify="space-between"
         wrap="wrap"
         w="100%"
         mb={8}
-        p={5}
+        py={7}
+        px={{ base: "20px", md: "17vw" }}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
       >
-        <LogoSvg
-          height="3rem"
-        />
+        <LogoSvg height="3rem" />
 
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <Box

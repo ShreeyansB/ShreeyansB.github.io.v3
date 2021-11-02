@@ -8,9 +8,10 @@ const config = {
 };
 
 export const colors = {
-  primary: "#1A202C",
-  secondary: "#E53E3E",
-  primaryDark: "#F7FAFC",
+  primary: "#2F2F33",
+  secondary: "#EF5050",
+  primaryDark: "#EDF2F7",
+  alternate: "#657BEA"
 };
 
 const styles = {
