@@ -21,6 +21,7 @@ const NavLink = (props) => {
       color={colorMode === "light" ? "primary" : "primaryDark"}
       variant="ghost"
       {...attributes}
+      display="inline-block"
     >
       <Text fontSize="lg">{props.children}</Text>
     </Button>

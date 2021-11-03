@@ -1,6 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { mode } from '@chakra-ui/theme-tools';
-
+import { mode } from "@chakra-ui/theme-tools";
 
 const config = {
   initialColorMode: "light",
@@ -11,17 +10,22 @@ export const colors = {
   primary: "#2F2F33",
   secondary: "#EF5050",
   primaryDark: "#EDF2F7",
-  alternate: "#657BEA"
+  alternate: "#657BEA",
 };
 
 const styles = {
-  global: props => ({
+  global: (props) => ({
     body: {
-      bg: mode('gray.100', 'gray.900')(props),
+      bg: mode("gray.100", "gray.900")(props),
     },
   }),
 };
 
-const theme = extendTheme({ config, colors, styles });
+const fonts = {
+  heading: 'Plus Jakarta Sans',
+  body: 'Inter',
+}
+
+const theme = extendTheme({ config, colors, styles , fonts});
 
 export default theme;

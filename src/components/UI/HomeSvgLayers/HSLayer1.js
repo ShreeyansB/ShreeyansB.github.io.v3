@@ -4,24 +4,18 @@ import { Parallax } from "react-scroll-parallax";
 
 const HSLayer1 = (props) => {
 
-  const myStyle = {
-    width: props.w,
-    height: props.h,
-    viewBox: `0 0 ${props.w} ${props.h}`,
-  };
-
   return (
     <Box position="absolute" zIndex="1">
       <Parallax y={[5, -5]}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          width="472.851"
-          height="427.787"
+          // width="472.851"
+          // height="427.787"
           x="0"
           y="0"
           viewBox="0 0 472.851 427.787"
-          style={myStyle}
+          // style={myStyle}
         >
           <path
             fill="none"

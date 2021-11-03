@@ -6,11 +6,6 @@ import { colors } from "../../../Theme";
 const HSLayer2 = (props) => {
   const { colorMode } = useColorMode();
 
-  const myStyle = {
-    width: props.w,
-    height: props.h,
-    viewBox: `0 0 ${props.w} ${props.h}`,
-  };
 
   return (
     <Box position="absolute" zIndex="2">
@@ -18,12 +13,12 @@ const HSLayer2 = (props) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          width="472.851"
-          height="427.787"
+          // width="472.851"
+          // height="427.787"
           x="0"
           y="0"
           viewBox="0 0 472.851 427.787"
-          style={myStyle}
+          // style={myStyle}
         >
           <path
             fill={colorMode === "light" ? colors.primary : colors.primaryDark}

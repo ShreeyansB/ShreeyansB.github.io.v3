@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 
 const MainSection = (props) => {
   return (
-    <Box px={{ base: "15vw", md: "15vw" }}>
+    <Box px={{ base: "10vw", md: "12vw" }}>
       {props.children}
     </Box>
   );

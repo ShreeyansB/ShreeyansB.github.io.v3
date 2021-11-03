@@ -5,6 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import MenuToggle from "../Buttons/MenuToggle";
 import NavLink from "./../Buttons/NavLink";
 import LogoSvg from "./LogoSvg";
+import TopDownAnim from "../Animations/TopDownAnim";
 
 const Header = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -26,7 +27,7 @@ const Header = (props) => {
         w="100%"
         mb={8}
         py={7}
-        px={{ base: "20px", md: "16vw" }}
+        px={{ base: "20px", md: "12vw" }}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
       >
@@ -45,17 +46,29 @@ const Header = (props) => {
             direction={["column", "row", "row", "row"]}
             pt={[4, 4, 0, 0]}
           >
-            <NavLink>Home</NavLink>
-            <NavLink>Skills</NavLink>
-            <NavLink>Projects</NavLink>
-            <NavLink>Contact</NavLink>
-            <DarkModeSwitch
-              checked={colorMode === "dark"}
-              onChange={toggleColorMode}
-              sunColor="black"
-              moonColor="white"
-              size={22}
-            />
+            <TopDownAnim index={0}>
+              <NavLink>Home</NavLink>
+            </TopDownAnim>
+            <TopDownAnim index={1}>
+              <NavLink>Skills</NavLink>
+            </TopDownAnim>
+
+            <TopDownAnim index={2}>
+              <NavLink>Projects</NavLink>
+            </TopDownAnim>
+
+            <TopDownAnim index={3}>
+              <NavLink>Contact</NavLink>
+            </TopDownAnim>
+            <TopDownAnim index={4}>
+              <DarkModeSwitch
+                checked={colorMode === "dark"}
+                onChange={toggleColorMode}
+                sunColor="black"
+                moonColor="white"
+                size={22}
+              />
+            </TopDownAnim>
           </Stack>
         </Box>
       </Flex>
