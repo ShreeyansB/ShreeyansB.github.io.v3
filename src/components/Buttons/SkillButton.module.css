@@ -1,0 +1,25 @@
+.animate {
+  animation: animrev 0.2s ease-out forwards;
+}
+
+.animate:hover {
+  animation: anim 0.2s ease-out forwards;
+}
+
+@keyframes anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes animrev {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

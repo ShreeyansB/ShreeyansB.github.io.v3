@@ -1,0 +1,131 @@
+import {
+  GridItem,
+  SimpleGrid,
+  useColorMode,
+  Stack,
+} from "@chakra-ui/react";
+import React from "react";
+import SkillButton from "../Buttons/SkillButton";
+import AiSVGIcon from "../SVG/ai";
+import { colors } from "./../../Theme";
+import DartSVGIcon from "./../SVG/dart";
+import GoSVGIcon from "./../SVG/go";
+import PsSVGIcon from "./../SVG/ps";
+import CppSVGIcon from "./../SVG/cpp";
+import CssSVGIcon from "./../SVG/css";
+import FlutterSVGIcon from "./../SVG/flutter";
+import GitSVGIcon from "./../SVG/git";
+import HtmlSVGIcon from "./../SVG/html";
+import JavaSVGIcon from "./../SVG/java";
+import JsSVGIcon from "./../SVG/js";
+import ReactSVGIcon from "./../SVG/react";
+
+const SkillGrid = (props) => {
+  const { colorMode } = useColorMode();
+
+  const color =
+    colorMode === "light"
+      ? { fill: colors.primary, stroke: colors.primary }
+      : { fill: colors.primaryDark, stroke: colors.primaryDark };
+
+  return (
+    <Stack spacing={7} mt={{ base: 14, lg: 0 }}>
+      <SimpleGrid
+        columns={5}
+        gap={{ base: 7, md: 8, lg: 9 }}
+        maxW="27rem"
+      >
+        <SkillButton label="C/C++" url="https://isocpp.org/">
+          <CppSVGIcon myStyle={color} />
+        </SkillButton>
+
+        <SkillButton
+          label="HTML"
+          url="https://html.com/"
+        >
+          <HtmlSVGIcon myStyle={color} />
+        </SkillButton>
+        <SkillButton
+          label="Javascript"
+          url="https://www.javascript.com/"
+        >
+          <JsSVGIcon myStyle={color} />
+        </SkillButton>
+        <SkillButton
+          label="CSS"
+          url="https://www.w3.org/Style/CSS/Overview.en.html"
+        >
+          <CssSVGIcon myStyle={color} />
+        </SkillButton>
+        <SkillButton
+          label="Git"
+          url="https://git-scm.com/"
+        >
+          <GitSVGIcon myStyle={color} />
+        </SkillButton>
+      </SimpleGrid>
+      <SimpleGrid
+        columns={4}
+        gap={{ base: 7, md: 8, lg: 9 }}
+        maxW="27rem"
+        px={16}
+      >
+        <SkillButton
+          label="Adobe Illustrator"
+          url="https://www.adobe.com/in/products/illustrator.html"
+        >
+          <AiSVGIcon myStyle={color} />
+        </SkillButton>
+        <GridItem colSpan={2} p={1}>
+          <SkillButton
+            label="Go"
+            url="https://golang.org/"
+          >
+            <GoSVGIcon myStyle={color} />
+          </SkillButton>
+        </GridItem>
+        <SkillButton
+          label="Adobe Photoshop"
+          url="https://www.adobe.com/in/products/photoshop.html"
+        >
+          <PsSVGIcon myStyle={color} />
+        </SkillButton>
+      </SimpleGrid>
+      <SimpleGrid
+        columns={4}
+        gap={{ base: 7, md: 8, lg: 9 }}
+        maxW="27rem"
+        px={"2.3rem"}
+      >
+        <SkillButton
+          label="Dart"
+          url="https://dart.dev/"
+        >
+          <DartSVGIcon myStyle={color} />
+        </SkillButton>
+
+        <SkillButton
+          label="Java"
+          url="https://www.java.com/en/"
+        >
+          <JavaSVGIcon myStyle={color} />
+        </SkillButton>
+
+        <SkillButton
+          label="React"
+          url="https://reactjs.org/"
+        >
+          <ReactSVGIcon myStyle={color} />
+        </SkillButton>
+        <SkillButton
+          label="Flutter"
+          url="https://flutter.dev/"
+        >
+          <FlutterSVGIcon myStyle={color} />
+        </SkillButton>
+      </SimpleGrid>
+    </Stack>
+  );
+};
+
+export default SkillGrid;

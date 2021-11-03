@@ -12,17 +12,17 @@ const HomeBanner = () => {
   return (
     <Flex direction="row" justify="space-between" align="center" mt="7rem">
       <Box>
-        <FadeUpAnim index={0}>
+        <FadeUpAnim index={0} delay={0.7}>
           <Text fontSize="2xl" fontWeight="500" ps="2px">
             Hello! I am,
           </Text>
         </FadeUpAnim>
-        <FadeUpAnim index={1}>
+        <FadeUpAnim index={1} delay={0.7}>
           <Heading size="2xl" color={nameColor}>
             Shreeyans Bahadkar,
           </Heading>
         </FadeUpAnim>
-        <FadeUpAnim index={2}>
+        <FadeUpAnim index={2} delay={0.7}>
           <Text fontSize="2xl" fontWeight="500" ps="2px" mt={5}>
             A Full Stack Developer from Thane, IN <br />
             crafting robust & beautiful apps and websites. <br />

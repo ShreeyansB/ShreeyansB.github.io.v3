@@ -3,7 +3,7 @@ import classes from './FadeUpAnim.module.css'
 
 const FadeUpAnim = (props) => {
   const myStyle = {
-    animationDelay: `${props.index * 0.1 + 0.7}s`,
+    animationDelay: `${props.index * 0.1 + props.delay}s`,
   };
 
   return (
