@@ -7,10 +7,10 @@ const NavLink = (props) => {
     colorMode === "light"
       ? {
           _hover: {
-            backgroundColor: "gray.200",
+            backgroundColor: "blackAlpha.50",
           },
           _active: {
-            backgroundColor: "gray.300",
+            backgroundColor: "blackAlpha.200",
           },
         }
       : {};
@@ -22,8 +22,9 @@ const NavLink = (props) => {
       variant="ghost"
       {...attributes}
       display="inline-block"
+      onClick={props.onClick}
     >
-      <Text fontSize="lg">{props.children}</Text>
+      <Text fontSize="lg" px={2}>{props.children}</Text>
     </Button>
   );
 };

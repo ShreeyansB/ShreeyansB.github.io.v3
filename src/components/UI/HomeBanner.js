@@ -1,13 +1,20 @@
-import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, useColorMode, Wrap } from "@chakra-ui/react";
 import React from "react";
 import HomeSvg from "./HomeSvg";
 import { colors } from "./../../Theme";
 import FadeUpAnim from "../Animations/FadeUpAnim";
+import HomeButton from "../Buttons/HomeButton";
+import { DownloadIcon } from "@chakra-ui/icons";
+import { Link } from "react-scroll";
 
 const HomeBanner = () => {
   const { colorMode } = useColorMode();
 
   const nameColor = colorMode === "light" ? colors.secondary : colors.alternate;
+
+  const openResumeHandler = () => {
+    window.open("./Resume_redacted.pdf", "_blank").focus();
+  };
 
   return (
     <Flex direction="row" justify="space-between" align="center" mt="7rem">
@@ -28,6 +35,20 @@ const HomeBanner = () => {
             crafting robust & beautiful apps and websites. <br />
             Experienced in Cross Platform Develpment & Graphic Design.
           </Text>
+        </FadeUpAnim>
+        <FadeUpAnim index={3} delay={0.7}>
+          <Wrap spacing={7} mt={5}>
+            <Link to="skills" smooth={true} duration={700}>
+              <HomeButton>Know More</HomeButton>
+            </Link>
+            <HomeButton
+              variant="outline"
+              leftIcon={<DownloadIcon />}
+              onClick={openResumeHandler}
+            >
+              Resume
+            </HomeButton>
+          </Wrap>
         </FadeUpAnim>
       </Box>
       <Box display={{ base: "none", lg: "block" }}>

@@ -22,6 +22,7 @@ const SkillBanner = (props) => {
       direction={{ base: "column", lg: "row" }}
       justify="space-between"
       mt="30vh"
+      id="skills"
     >
       <Box flexShrink={0} pe={10}>
         <Stack direction={{base: "row", lg: "column"}} align="flex-start">

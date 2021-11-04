@@ -6,19 +6,41 @@ import MenuToggle from "../Buttons/MenuToggle";
 import NavLink from "./../Buttons/NavLink";
 import LogoSvg from "./LogoSvg";
 import TopDownAnim from "../Animations/TopDownAnim";
+import { colors } from "./../../Theme";
+import Scroll, { Link } from "react-scroll";
 
 const Header = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
-
+  var scroll = Scroll.animateScroll;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log(isOpen);
+  const headerStyle = {
+    zIndex: 5,
+    position: "sticky",
+    top: 0,
+    backgroundColor:
+      colorMode === "light" ? colors.primaryDarkAlpha : colors.primaryAlpha,
+  };
+
+  const scrollToTopHandler = () => {
+    scroll.scrollToTop({
+      duration: 700,
+    });
+  };
+
+  const scrollToBottomHandler = () => {
+    scroll.scrollToBottom({
+      duration: 800,
+    });
+  };
+
+  console.log(headerStyle);
   return (
-    <header>
+    <nav style={headerStyle}>
       <Flex
         as="nav"
         align="center"
@@ -31,7 +53,9 @@ const Header = (props) => {
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
       >
-        <LogoSvg height="3rem" />
+        <Box cursor="pointer" onClick={scrollToTopHandler}>
+          <LogoSvg height="3rem" />
+        </Box>
 
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <Box
@@ -40,17 +64,19 @@ const Header = (props) => {
           className={isOpen ? classes.show : undefined}
         >
           <Stack
-            spacing={5}
+            spacing={3}
             align="center"
             justify={["center", "space-between", "flex-end", "flex-end"]}
             direction={["column", "row", "row", "row"]}
             pt={[4, 4, 0, 0]}
           >
             <TopDownAnim index={0}>
-              <NavLink>Home</NavLink>
+              <NavLink onClick={scrollToTopHandler}>Home</NavLink>
             </TopDownAnim>
             <TopDownAnim index={1}>
-              <NavLink>Skills</NavLink>
+              <Link to="skills" smooth={true} duration={700}>
+                <NavLink>Skills</NavLink>
+              </Link>
             </TopDownAnim>
 
             <TopDownAnim index={2}>
@@ -58,21 +84,22 @@ const Header = (props) => {
             </TopDownAnim>
 
             <TopDownAnim index={3}>
-              <NavLink>Contact</NavLink>
+              <NavLink  onClick={scrollToBottomHandler}>Contact</NavLink>
             </TopDownAnim>
             <TopDownAnim index={4}>
               <DarkModeSwitch
                 checked={colorMode === "dark"}
                 onChange={toggleColorMode}
-                sunColor="black"
-                moonColor="white"
+                sunColor={colors.primary}
+                moonColor={colors.primaryDark}
                 size={22}
+                style={{marginLeft: "10px"}}
               />
             </TopDownAnim>
           </Stack>
         </Box>
       </Flex>
-    </header>
+    </nav>
   );
 };
 
