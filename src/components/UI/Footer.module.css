@@ -1,0 +1,28 @@
+.social {
+  height: 2.2rem !important;
+  width: 2.2rem !important;
+  animation: animrev 0.1s ease-out forwards;
+  
+}
+
+.social:hover {
+  animation: anim 0.1s ease-out forwards;
+}
+
+@keyframes anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes animrev {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

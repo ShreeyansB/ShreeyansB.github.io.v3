@@ -38,6 +38,13 @@ const Header = (props) => {
     });
   };
 
+  const contactHandler = () => {
+    scrollToBottomHandler();
+    setTimeout(() => {
+      props.popFunc();
+    }, 800);
+  };
+
   console.log(headerStyle);
   return (
     <nav style={headerStyle}>
@@ -84,7 +91,7 @@ const Header = (props) => {
             </TopDownAnim>
 
             <TopDownAnim index={3}>
-              <NavLink  onClick={scrollToBottomHandler}>Contact</NavLink>
+              <NavLink onClick={contactHandler}>Contact</NavLink>
             </TopDownAnim>
             <TopDownAnim index={4}>
               <DarkModeSwitch
@@ -93,7 +100,7 @@ const Header = (props) => {
                 sunColor={colors.primary}
                 moonColor={colors.primaryDark}
                 size={22}
-                style={{marginLeft: "10px"}}
+                style={{ marginLeft: "10px" }}
               />
             </TopDownAnim>
           </Stack>
