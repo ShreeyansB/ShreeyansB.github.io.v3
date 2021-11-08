@@ -19,7 +19,6 @@ function App() {
 
   const [dbData, setDbData] = useState([]);
 
-  console.log("poo");
   return (
     <ChakraProvider resetCSS theme={theme}>
       <Fonts />
