@@ -41,11 +41,10 @@ const Header = (props) => {
   const contactHandler = () => {
     scrollToBottomHandler();
     setTimeout(() => {
-      props.popFunc();
+      props.popfunc();
     }, 800);
   };
 
-  console.log(headerStyle);
   return (
     <nav style={headerStyle}>
       <Flex
@@ -57,8 +56,8 @@ const Header = (props) => {
         mb={8}
         py={7}
         px={{ base: "20px", md: "12vw" }}
+        ps={{ base: "28px", md: undefined }}
         color={["white", "white", "primary.700", "primary.700"]}
-        {...props}
       >
         <Box cursor="pointer" onClick={scrollToTopHandler}>
           <LogoSvg height="3rem" />
@@ -81,13 +80,15 @@ const Header = (props) => {
               <NavLink onClick={scrollToTopHandler}>Home</NavLink>
             </TopDownAnim>
             <TopDownAnim index={1}>
-              <Link to="skills" smooth={true} duration={700}>
+              <Link to="skills" smooth={true} duration={700} offset={-150}>
                 <NavLink>Skills</NavLink>
               </Link>
             </TopDownAnim>
 
             <TopDownAnim index={2}>
-              <NavLink>Projects</NavLink>
+              <Link to="projects" smooth={true} duration={700} offset={-150}>
+                <NavLink>Projects</NavLink>
+              </Link>
             </TopDownAnim>
 
             <TopDownAnim index={3}>

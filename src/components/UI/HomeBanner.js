@@ -33,7 +33,7 @@ const HomeBanner = () => {
           <Text fontSize="2xl" fontWeight="500" ps="2px" mt={5}>
             A Full Stack Developer from Thane, IN <br />
             crafting robust & beautiful apps and websites. <br />
-            Experienced in Cross Platform Develpment & Graphic Design.
+            Experienced in Cross Platform Development & Graphic Design.
           </Text>
         </FadeUpAnim>
         <FadeUpAnim index={3} delay={0.7}>

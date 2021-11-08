@@ -69,7 +69,7 @@ const Footer = (props) => {
             />
           </Stack>
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent mx={2} mb={5}>
           <PopoverCloseButton />
           <PopoverBody fontWeight={600}>
             Reach me via Email or Telegram
