@@ -38,7 +38,7 @@ const HomeBanner = () => {
         </FadeUpAnim>
         <FadeUpAnim index={3} delay={0.7}>
           <Wrap spacing={7} mt={5}>
-            <Link to="skills" smooth={true} duration={700}>
+            <Link to="skills" smooth={true} duration={700} offset={-150}>
               <HomeButton>Know More</HomeButton>
             </Link>
             <HomeButton
