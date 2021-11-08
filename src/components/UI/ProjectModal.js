@@ -24,6 +24,7 @@ const ProjectModal = (props) => {
         bg={colorMode === "dark" ? colors.primary : colors.primaryDark}
         p={8}
         w={{ base: "70%", md: "35rem" }}
+        h={{base: "80vh", md: undefined}}
         overflowY="auto"
         position="fixed"
         zIndex={7}
