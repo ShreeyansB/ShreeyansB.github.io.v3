@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./LogoSvg.module.css";
 import {Box, useColorMode } from "@chakra-ui/react";
-import { colors } from './../../Theme';
+import { Colors as colors } from "../../Colors";
 
 const LogoSvg = (props) => {
   const { colorMode } = useColorMode();

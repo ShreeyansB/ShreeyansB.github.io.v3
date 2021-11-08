@@ -1,6 +1,6 @@
 import { Button, useColorMode } from "@chakra-ui/react";
 import React from "react";
-import { colors } from "../../Theme";
+import { Colors as colors } from "../../Colors";
 
 const HomeButton = (props) => {
   const { colorMode } = useColorMode();

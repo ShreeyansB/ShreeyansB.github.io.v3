@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Text, useColorMode, Wrap } from "@chakra-ui/react";
 import React from "react";
 import HomeSvg from "./HomeSvg";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import FadeUpAnim from "../Animations/FadeUpAnim";
 import HomeButton from "../Buttons/HomeButton";
 import { DownloadIcon } from "@chakra-ui/icons";

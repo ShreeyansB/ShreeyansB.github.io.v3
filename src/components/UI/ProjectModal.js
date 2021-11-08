@@ -6,7 +6,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React, { useContext } from "react";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import classes from "./ProjectModal.module.css";
 import DBContext from "./../../context/db-context";
 import LangButtons from "./LangButtons";

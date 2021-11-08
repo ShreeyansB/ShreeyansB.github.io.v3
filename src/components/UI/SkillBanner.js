@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import SkillGrid from "./SkillGrid";
 import FadeUpAnim from "./../Animations/FadeUpAnim";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import ArrowSVG from "../SVG/arrow";
 
 const SkillBanner = (props) => {

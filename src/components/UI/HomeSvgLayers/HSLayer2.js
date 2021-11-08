@@ -1,7 +1,7 @@
 import { Box, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
-import { colors } from "../../../Theme";
+import { Colors as colors } from "../../../Colors";
 
 const HSLayer2 = (props) => {
   const { colorMode } = useColorMode();

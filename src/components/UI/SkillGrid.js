@@ -2,7 +2,7 @@ import { SimpleGrid, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import SkillButton from "../Buttons/SkillButton";
 import AiSVGIcon from "../SVG/ai";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import DartSVGIcon from "./../SVG/dart";
 import GoSVGIcon from "./../SVG/go";
 import PsSVGIcon from "./../SVG/ps";

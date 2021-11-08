@@ -6,7 +6,7 @@ const config = {
   useSystemColorMode: false,
 };
 
-export const colors = {
+const colors = {
   primary: "#171923",
   secondary: "#EF5050",
   primaryDark: "#EDF2F7",

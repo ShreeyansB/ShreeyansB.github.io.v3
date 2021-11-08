@@ -6,7 +6,7 @@ import MenuToggle from "../Buttons/MenuToggle";
 import NavLink from "./../Buttons/NavLink";
 import LogoSvg from "./LogoSvg";
 import TopDownAnim from "../Animations/TopDownAnim";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import Scroll, { Link } from "react-scroll";
 
 const Header = (props) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Wrap, Button } from "@chakra-ui/react";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 
 const TrailingButtons = (props) => {
   const openLink = (link) => {

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import classes from "./Footer.module.css";
 
 const Footer = (props) => {

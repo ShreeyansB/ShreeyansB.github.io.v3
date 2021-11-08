@@ -1,6 +1,6 @@
 import React from "react";
 import { useColorMode } from "@chakra-ui/react";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import classes from "./arrow.module.css";
 import ScrollAnimation from "react-animate-on-scroll";
 

@@ -4,7 +4,7 @@ import FadeUpAnim from "./../Animations/FadeUpAnim";
 import { Text } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
-import { colors } from "./../../Theme";
+import { Colors as colors } from "../../Colors";
 import ProjectsLoadingGrid from "./ProjectsLoadingGrid";
 import DBContext from "./../../context/db-context";
 import ProjectsGrid from "./ProjectsGrid";
