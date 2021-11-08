@@ -1,15 +1,15 @@
 .opacity {
   animation: opacityanim 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  opacity: 0%;
+  opacity: 0;
 }
 
 @keyframes opacityanim {
   from {
-    opacity: 0%;
+    opacity: 0;
     scale: 0.9;
   }
   to {
-    opacity: 100%;
+    opacity: 1;
     scale: 1;
   }
 }

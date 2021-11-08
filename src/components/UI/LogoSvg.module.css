@@ -4,7 +4,7 @@
 
 .stroke {
   stroke-width: 10px;
-  fill-opacity: 0%;
+  fill-opacity: 0;
   stroke-dasharray: 90000;
   stroke-linecap: square;
   animation: strokeanim 1.3s cubic-bezier(0.25, 1, 0.5, 1),
@@ -13,7 +13,7 @@
 
 .strokealt {
   stroke-width: 10px;
-  fill-opacity: 0%;
+  fill-opacity: 0;
   stroke-dasharray: 90000;
   stroke-linecap: square;
   animation: strokealtanim 1.3s cubic-bezier(0.25, 1, 0.5, 1),
@@ -41,9 +41,9 @@
 
 @keyframes fillanim {
   from {
-    fill-opacity: 0%;
+    fill-opacity: 0;
   }
   to {
-    fill-opacity: 100%;
+    fill-opacity: 1;
   }
 }
