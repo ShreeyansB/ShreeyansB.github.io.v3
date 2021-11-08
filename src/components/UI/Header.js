@@ -1,5 +1,4 @@
 import { Stack, Box, Flex, useColorMode } from "@chakra-ui/react";
-import classes from "./Header.module.css";
 import React, { useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import MenuToggle from "../Buttons/MenuToggle";
@@ -26,6 +25,7 @@ const Header = (props) => {
     backgroundColor:
       colorMode === "light" ? colors.primaryDarkAlpha : colors.primaryAlpha,
   };
+
 
   const scrollToTopHandler = () => {
     scroll.scrollToTop({
@@ -58,7 +58,6 @@ const Header = (props) => {
         py={7}
         px={{ base: "20px", md: "12vw" }}
         ps={{ base: "28px", md: undefined }}
-        color={["white", "white", "primary.700", "primary.700"]}
       >
         <Box cursor="pointer" onClick={scrollToTopHandler}>
           <LogoSvg height="3rem" />
@@ -68,7 +67,6 @@ const Header = (props) => {
         <Box
           display={{ base: isOpen ? "block" : "none", md: "block" }}
           flexBasis={{ base: "100%", md: "auto" }}
-          className={isOpen ? classes.show : undefined}
         >
           <Stack
             spacing={3}
