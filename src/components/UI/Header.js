@@ -20,7 +20,8 @@ const Header = (props) => {
 
   const headerStyle = {
     zIndex: 5,
-    position: "sticky",
+    position: "fixed",
+    width: "100%",
     top: 0,
     backgroundColor:
       colorMode === "light" ? colors.primaryDarkAlpha : colors.primaryAlpha,
@@ -53,7 +54,7 @@ const Header = (props) => {
         justify="space-between"
         wrap="wrap"
         w="100%"
-        mb={8}
+        mb={0}
         py={7}
         px={{ base: "20px", md: "12vw" }}
         ps={{ base: "28px", md: undefined }}

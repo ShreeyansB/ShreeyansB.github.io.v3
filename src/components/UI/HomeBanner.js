@@ -17,7 +17,7 @@ const HomeBanner = () => {
   };
 
   return (
-    <Flex direction="row" justify="space-between" align="center" mt="7rem">
+    <Flex direction="row" justify="space-between" align="center" mt="13.5rem">
       <Box>
         <FadeUpAnim index={0} delay={0.7}>
           <Text fontSize="2xl" fontWeight="500" ps="2px">
