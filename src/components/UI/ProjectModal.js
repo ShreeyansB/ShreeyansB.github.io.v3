@@ -23,14 +23,14 @@ const ProjectModal = (props) => {
       <Box
         bg={colorMode === "dark" ? colors.primary : colors.primaryDark}
         p={8}
-        w={{ base: "70%", md: "35rem" }}
-        h={{base: "80vh", md: undefined}}
+        w={{ base: "80%", md: "35rem" }}
+        h={{base: "75vh", sm: "auto"}}
         overflowY="auto"
         position="fixed"
         zIndex={7}
         top="10vh"
         left="50%"
-        ml={{ base: "-35%", md: "-17.5rem" }}
+        ml={{ base: "-40%", md: "-17.5rem" }}
         shadow="2xl"
         borderRadius={20}
         className={`${props.isMounted === true ? classes.fadein : null} ${

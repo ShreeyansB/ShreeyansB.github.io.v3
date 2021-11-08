@@ -33,7 +33,7 @@ const ProjectsBanner = (props) => {
     setIsMounted(false);
     setTimeout(() => {
       setIsModalOpen(false);
-    }, 220);
+    }, 420);
   };
 
   useEffect(() => {
